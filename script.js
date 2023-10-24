@@ -1,4 +1,9 @@
-const hiveGridEl = document.querySelector(".hive-grid");
+import { renderGrid } from './setup.js';
 
-hexagonAmount = 80;
-for(i = 1; i <= hexagonAmount; i++) hiveGridEl.insertAdjacentHTML("beforeend", `<div class="hexagon"></div>`);
+renderGrid();
+
+const hexagonEls = document.querySelectorAll(".hexagon");
+
+hexagonEls.forEach((hexagon) => hexagon.addEventListener("click", function(){
+    
+}));

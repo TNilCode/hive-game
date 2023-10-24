@@ -4,7 +4,7 @@
 }
 
 :root {
-    --s: 100px;
+    --s: 80px;
     /* size  */
     --m: 1px;
     /* margin */
@@ -16,25 +16,28 @@ html,
 .container {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
+}
+
+.blurred {
+    filter: blur(4px);
+}
+
+.hidden {
+    display: none !important;
 }
 
 .container {
     display: flex;
     background-color: #252424;
     justify-content: center;
-    /* align-items: center;
-    justify-content: center; */
-    /* /* align-items: center
-    justify-content: center; */
-    /* position: relative; */
+    align-items: center;
 }
 
 .hive-grid {
     margin: 50px;
-    /* position: absolute; */
-    width: 1121px;
-    height: 1500px;
+    max-width: 900px;
+    max-height: 1500px;
 }
 
 .hexagon {
@@ -46,13 +49,4 @@ html,
     clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
     background: #4d4a4a;
     margin-bottom: calc(var(--m) - var(--s)*0.2885);
-}
-
-.hive-grid::before {
-    content: "";
-    width: calc(var(--s)/2 + var(--m));
-    float: left;
-    height: 120%;
-    shape-outside: repeating-linear-gradient(#0000 0 calc(var(--f) - 3px),
-            #000 0 var(--f));
 }
